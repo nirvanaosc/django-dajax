@@ -1,7 +1,9 @@
-var Dajax = {
-    process: function(data)
+var Dajax = window.Dajax || (function($) {
+    var that = {};
+
+    that.process = function(data)
     {
-        $.each(data, function(i,elem){
+        $.each(data, function(i,elem) {
         switch(elem.cmd)
         {
             case 'alert':
@@ -17,32 +19,32 @@ var Dajax = {
                     $(elem.id).html(elem.val);
                 }
                 else{
-                    jQuery.each($(elem.id),function(){ this[elem.prop] = elem.val; });
+                    $.each($(elem.id),function(){ this[elem.prop] = elem.val; });
                 }
             break;
 
             case 'addcc':
-                jQuery.each(elem.val,function(){
+                $.each(elem.val,function(){
                     $(elem.id).addClass(String(this));
                 });
             break;
 
             case 'remcc':
-                jQuery.each(elem.val,function(){
+                $.each(elem.val,function(){
                     $(elem.id).removeClass(String(this));
                 });
             break;
 
             case 'ap':
-                jQuery.each($(elem.id),function(){ this[elem.prop] += elem.val; });
+                $.each($(elem.id),function(){ this[elem.prop] += elem.val; });
             break;
 
             case 'pp':
-                jQuery.each($(elem.id),function(){ this[elem.prop] = elem.val + this[elem.prop]; });
+                $.each($(elem.id),function(){ this[elem.prop] = elem.val + this[elem.prop]; });
             break;
 
             case 'clr':
-                jQuery.each($(elem.id),function(){ this[elem.prop] = ""; });
+                $.each($(elem.id),function(){ this[elem.prop] = ""; });
             break;
 
             case 'red':
@@ -62,4 +64,8 @@ var Dajax = {
             }
         });
     }
-};
+
+    return that;
+}(jQuery));
+
+window.Dajax = Dajax;
