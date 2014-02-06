@@ -11,7 +11,7 @@ You need to remember to run ``python manage.py collectstatic`` before deploying 
 
 You should change all you dajax core imports using for example for jQuery::
 
-    {% static "dajax/jquery.core.js" %}
+    {% static "dajax/jquery.dajax.core.js" %}
 
 
 Imports
