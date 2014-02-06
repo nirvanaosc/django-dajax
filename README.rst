@@ -12,7 +12,7 @@ It supports up to four of the most popular JS frameworks:
 
 Using ``django-dajaxice`` communication core, ``django-dajax`` implements an abstraction layer between the presentation logic managed with JS and your python business logic. With dajax you can modify your ``DOM`` structure directly from python.
 
-For more information about how django-dajax works: https://dajaxproject.com
+For more information about how django-dajax works: http://dajaxproject.com
 
 Official site http://dajaxproject.com
 Documentation http://readthedocs.org/projects/django-dajax/
