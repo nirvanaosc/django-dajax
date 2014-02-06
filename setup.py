@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='django-dajax-ng',
-    version='0.9.3',
+    version='0.9.4',
     author='Steffen Zieger',
     author_email='me@saz.sh',
     description=('Easy to use library to create asynchronous presentation '
