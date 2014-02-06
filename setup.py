@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='django-dajax',
-    version='0.9.2',
+    version='0.9.3',
     author='Jorge Bastida',
     author_email='me@jorgebastida.com',
     description=('Easy to use library to create asynchronous presentation '
@@ -17,7 +17,7 @@ setup(
                       'supports up to four of the most popular JS frameworks: '
                       'jQuery, Prototype, Dojo and mootols.'),
     install_requires=[
-        'django-dajaxice>=0.5'
+        'django-dajaxice>=0.5.6'
     ],
     classifiers=['Development Status :: 4 - Beta',
                 'Environment :: Web Environment',
