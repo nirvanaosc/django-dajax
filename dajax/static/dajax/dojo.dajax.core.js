@@ -9,7 +9,7 @@ var Dajax = {
             break;
 
             case 'data':
-                window[elem.fun](elem.val);
+                eval( elem.fun+"(elem.val);" );
             break;
 
             case 'as':
