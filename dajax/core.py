@@ -15,6 +15,9 @@ class Dajax(object):
     def assign(self, id, attribute, value):
         self.calls.append({'cmd': 'as', 'id': id, 'prop': attribute, 'val': value})
 
+    def replace(self, id, value):
+        self.calls.append({'cmd': 'replace', 'id': id, 'val': value})
+
     def add_css_class(self, id, value):
         if not hasattr(value, '__iter__'):
             value = [value]

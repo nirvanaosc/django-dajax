@@ -23,6 +23,10 @@ var Dajax = window.Dajax || (function($) {
                 }
             break;
 
+            case 'replace':
+                $(elem.id).replaceWith(elem.val);
+            break;
+
             case 'addcc':
                 $.each(elem.val,function(){
                     $(elem.id).addClass(String(this));
