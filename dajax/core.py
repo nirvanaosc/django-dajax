@@ -28,6 +28,9 @@ class Dajax(object):
             value = [value]
         self.calls.append({'cmd': 'remcc', 'id': id, 'val': value})
 
+    def set_css(self, id, attribute, value):
+        self.calls.append({'cmd': 'setcss', 'id': id, 'prop': attribute, 'val': value})
+
     def append(self, id, attribute, value):
         self.calls.append({'cmd': 'ap', 'id': id, 'prop': attribute, 'val': value})
 

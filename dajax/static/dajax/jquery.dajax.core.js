@@ -39,6 +39,10 @@ var Dajax = window.Dajax || (function($) {
                 });
             break;
 
+            case 'setcss':
+                $(elem.id).css(elem.prop, elem.val);
+            break;
+
             case 'ap':
                 $.each($(elem.id),function(){ this[elem.prop] += elem.val; });
             break;
